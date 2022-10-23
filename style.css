@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Popins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+.table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1C1C1E;
+}
+
+h2{
+    position: relative;
+    font-size: 14vh;
+    color: #1C1C1E;
+    -webkit-text-stroke: 0.3vw #383d52;
+    text-transform: uppercase;
+}
+
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    left:0;
+    top:0;
+    width:0%;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke:#383d52;
+    border-right:2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate {
+    
+0%{
+    width:0;
+}
+
+100%{
+    width:100%;
+}
+
+}
